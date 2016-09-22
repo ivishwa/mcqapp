@@ -1,3 +1,4 @@
+
 'use strict';
 
 import React, { Component } from 'React';
@@ -14,7 +15,7 @@ function setup():React.Component {
         constructor() {
             super();
             this.state = {
-                store: configureStore(),
+                store: configureStore(()=> this.setState({})),
             };
         }
 

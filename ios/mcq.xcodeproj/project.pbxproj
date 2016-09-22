@@ -31,6 +31,18 @@
 		78A6857CA6BA4721845CF188 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4C91F4A710049FDBE1F2E12 /* MaterialIcons.ttf */; };
 		865E5F817FE644CAB6A0AC51 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1481E558691E4AAE9D09712A /* Octicons.ttf */; };
 		B1E578E3F31144A8846C1DDB /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1409F66BC3C4BB8962FDCFC /* Zocial.ttf */; };
+		3ED6B507D80C415788C1B0D9 /* Andale Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83AF6317ECD04DF3BFABD96F /* Andale Mono.ttf */; };
+		E17DAD04A54A4E99B9533C9C /* Arial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A991C1E6F1704B789F2EE492 /* Arial Black.ttf */; };
+		59648EE322A24E17AD407C15 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0966F3D63851402DBE4DF617 /* Arial.ttf */; };
+		6F0AFDD1633640C581D64DB3 /* Comic Sans MS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05B88035E77D49628B8C7855 /* Comic Sans MS.ttf */; };
+		D5712DAC30134C85B802ECFC /* Courier New.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 193D128F48534C17BD34950E /* Courier New.ttf */; };
+		ADACE3A8F4364543A171204E /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A8BEC16A4C4A78BFB8F0CD /* Georgia.ttf */; };
+		C663EAF3FCA54E469B67A1F4 /* Microsoft Sans Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC1F5247455472DB21C62E8 /* Microsoft Sans Serif.ttf */; };
+		7A5D04E976B54D77A0777283 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FD80BCDD70E48718F956FF6 /* Roboto_medium.ttf */; };
+		8DA51F8CF16C4821B1966C8F /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62EB386B55884BBE95BF3850 /* Roboto.ttf */; };
+		0BA28BE8C2124FB0B62AC9A4 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB079BAAB14C43C492EBED9E /* SF-UI-Text-Regular.otf */; };
+		F41CA5D3D8E044A490C066EB /* Skia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04317CE6EC304258A99E639B /* Skia.ttf */; };
+		043190410BAF485C982F12CB /* Times New Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCBCFCB05DB942D49A01E52B /* Times New Roman.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +157,18 @@
 		E4C91F4A710049FDBE1F2E12 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1481E558691E4AAE9D09712A /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C1409F66BC3C4BB8962FDCFC /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83AF6317ECD04DF3BFABD96F /* Andale Mono.ttf */ = {isa = PBXFileReference; name = "Andale Mono.ttf"; path = "../node_modules/native-base/Fonts/Andale Mono.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A991C1E6F1704B789F2EE492 /* Arial Black.ttf */ = {isa = PBXFileReference; name = "Arial Black.ttf"; path = "../node_modules/native-base/Fonts/Arial Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0966F3D63851402DBE4DF617 /* Arial.ttf */ = {isa = PBXFileReference; name = "Arial.ttf"; path = "../node_modules/native-base/Fonts/Arial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05B88035E77D49628B8C7855 /* Comic Sans MS.ttf */ = {isa = PBXFileReference; name = "Comic Sans MS.ttf"; path = "../node_modules/native-base/Fonts/Comic Sans MS.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		193D128F48534C17BD34950E /* Courier New.ttf */ = {isa = PBXFileReference; name = "Courier New.ttf"; path = "../node_modules/native-base/Fonts/Courier New.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		61A8BEC16A4C4A78BFB8F0CD /* Georgia.ttf */ = {isa = PBXFileReference; name = "Georgia.ttf"; path = "../node_modules/native-base/Fonts/Georgia.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BDC1F5247455472DB21C62E8 /* Microsoft Sans Serif.ttf */ = {isa = PBXFileReference; name = "Microsoft Sans Serif.ttf"; path = "../node_modules/native-base/Fonts/Microsoft Sans Serif.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6FD80BCDD70E48718F956FF6 /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		62EB386B55884BBE95BF3850 /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB079BAAB14C43C492EBED9E /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; name = "SF-UI-Text-Regular.otf"; path = "../node_modules/native-base/Fonts/SF-UI-Text-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		04317CE6EC304258A99E639B /* Skia.ttf */ = {isa = PBXFileReference; name = "Skia.ttf"; path = "../node_modules/native-base/Fonts/Skia.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DCBCFCB05DB942D49A01E52B /* Times New Roman.ttf */ = {isa = PBXFileReference; name = "Times New Roman.ttf"; path = "../node_modules/native-base/Fonts/Times New Roman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +363,18 @@
 				E4C91F4A710049FDBE1F2E12 /* MaterialIcons.ttf */,
 				1481E558691E4AAE9D09712A /* Octicons.ttf */,
 				C1409F66BC3C4BB8962FDCFC /* Zocial.ttf */,
+				83AF6317ECD04DF3BFABD96F /* Andale Mono.ttf */,
+				A991C1E6F1704B789F2EE492 /* Arial Black.ttf */,
+				0966F3D63851402DBE4DF617 /* Arial.ttf */,
+				05B88035E77D49628B8C7855 /* Comic Sans MS.ttf */,
+				193D128F48534C17BD34950E /* Courier New.ttf */,
+				61A8BEC16A4C4A78BFB8F0CD /* Georgia.ttf */,
+				BDC1F5247455472DB21C62E8 /* Microsoft Sans Serif.ttf */,
+				6FD80BCDD70E48718F956FF6 /* Roboto_medium.ttf */,
+				62EB386B55884BBE95BF3850 /* Roboto.ttf */,
+				BB079BAAB14C43C492EBED9E /* SF-UI-Text-Regular.otf */,
+				04317CE6EC304258A99E639B /* Skia.ttf */,
+				DCBCFCB05DB942D49A01E52B /* Times New Roman.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -554,6 +590,18 @@
 				78A6857CA6BA4721845CF188 /* MaterialIcons.ttf in Resources */,
 				865E5F817FE644CAB6A0AC51 /* Octicons.ttf in Resources */,
 				B1E578E3F31144A8846C1DDB /* Zocial.ttf in Resources */,
+				3ED6B507D80C415788C1B0D9 /* Andale Mono.ttf in Resources */,
+				E17DAD04A54A4E99B9533C9C /* Arial Black.ttf in Resources */,
+				59648EE322A24E17AD407C15 /* Arial.ttf in Resources */,
+				6F0AFDD1633640C581D64DB3 /* Comic Sans MS.ttf in Resources */,
+				D5712DAC30134C85B802ECFC /* Courier New.ttf in Resources */,
+				ADACE3A8F4364543A171204E /* Georgia.ttf in Resources */,
+				C663EAF3FCA54E469B67A1F4 /* Microsoft Sans Serif.ttf in Resources */,
+				7A5D04E976B54D77A0777283 /* Roboto_medium.ttf in Resources */,
+				8DA51F8CF16C4821B1966C8F /* Roboto.ttf in Resources */,
+				0BA28BE8C2124FB0B62AC9A4 /* SF-UI-Text-Regular.otf in Resources */,
+				F41CA5D3D8E044A490C066EB /* Skia.ttf in Resources */,
+				043190410BAF485C982F12CB /* Times New Roman.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
