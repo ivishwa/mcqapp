@@ -110,6 +110,7 @@ class AppNavigator extends Component {
                 ref={(ref) => this._drawer = ref}
                 type="overlay"
                 content={<SideBar navigator={this._navigator} />}
+                side={"right"}
                 tapToClose={true}
                 acceptPan={false}
                 onClose={() => this.closeDrawer()}

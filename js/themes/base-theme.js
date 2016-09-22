@@ -3,8 +3,8 @@ import Color from 'color';
 import {Platform} from 'react-native';
 
 module.exports = {
-    brandPrimary : "#428bca",
-    brandInfo: "#5bc0de",
+    brandPrimary : "#00303f",
+    brandInfo: "#00303f",
     brandSuccess: "#5cb85c",
     brandDanger: "#d9534f",
     brandWarning: "#f0ad4e",
@@ -62,7 +62,7 @@ module.exports = {
 
     footerHeight: 55,
     toolbarHeight: (Platform.OS === 'ios' ) ? 64 : 56,
-    toolbarDefaultBg: "#322A2A",
+    toolbarDefaultBg: "#00303f",
     toolbarInverseBg: "#222",
 
     iosToolbarBtnColor: '#fff',

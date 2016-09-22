@@ -23,7 +23,7 @@ class SideBar extends Component {
     render(){
         return (
             <Content style={styles.sidebar} >
-                <List foregroundColor={'white'}>
+                <List foregroundColor={'#000'}>
                     <ListItem button onPress={() => this.navigateTo('home')} >
                         <Text>Home</Text>
                     </ListItem>
