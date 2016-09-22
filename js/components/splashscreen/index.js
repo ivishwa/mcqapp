@@ -3,9 +3,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'native-base';
-
+import {
+    Image,
+    Dimensions
+     } from 'react-native';
+var {height, width} = Dimensions.get('window');
 export default class SplashPage extends Component {
-
     componentWillMount () {
         var navigator = this.props.navigator;
         setTimeout (() => {
@@ -16,7 +19,9 @@ export default class SplashPage extends Component {
     }
     render () {
         return (
-            <View />
+            <View style={{flex:1,flexDirection: 'column',justifyContent: 'center',alignItems: 'center', backgroundColor: '#aaa'}}>
+                <Image style={{height: height, width:width}} source={require('../../../images/screen.png')}></Image>
+            </View>
         );
     }
 }

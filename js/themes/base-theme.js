@@ -16,8 +16,8 @@ module.exports = {
 
     subtitleColor: '#8e8e93',
 
-    inverseTextColor: "#000",
-    textColor: "#fff",
+    inverseTextColor: "#fff",
+    textColor: "#000",
 
     fontSizeBase: 15,
     titleFontSize: (Platform.OS === 'ios' ) ? 17 : 19,

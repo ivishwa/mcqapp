@@ -22,7 +22,7 @@ class BlankPage extends Component {
         const { props: { name, index, list } } = this;
 
         return (
-            <Container theme={myTheme} style={{backgroundColor: '#565051'}}>
+            <Container theme={myTheme} style={{backgroundColor: '#fff'}}>
                 <Header>
                     <Button transparent onPress={() => this.popRoute()}>
                         <Icon name='ios-arrow-back' />
