@@ -3,13 +3,14 @@
 
 import type {Action} from '../actions/types';
 import { SET_INDEX } from '../actions/list';
+import { QUESTION_PAPER } from '../test_data/questions';
 
 export type State = {
     list: string
 }
 
 const initialState = {
-    list: ['React Native starter kit', 'RN Navigator', 'NB Easy Grid', 'NativeBase', 'CodePush', 'Redux'],
+    list: QUESTION_PAPER,
     selectedIndex: undefined
 };
 

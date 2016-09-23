@@ -10,7 +10,14 @@ import { openDrawer, closeDrawer } from '../../actions/drawer';
 import { setIndex } from '../../actions/list';
 import { replaceRoute, replaceOrPushRoute } from '../../actions/route';
 
-import { Container, Header, Title, Content, View, Text, Button, Icon } from 'native-base';
+import { Container, 
+         Header,
+         Title,
+         Content,
+         View,
+         Text,
+         Button,
+         Icon } from 'native-base';
 import { Grid, Col, Row } from 'react-native-easy-grid';
 
 import myTheme from '../../themes/base-theme';
@@ -31,7 +38,7 @@ class Home extends Component {
 
     render() {
         return (
-            <Container theme={myTheme}style={{backgroundColor: '#565051'}}>
+            <Container theme={myTheme}>
                 <Header>
                     <Button transparent onPress={() => this.replaceRoute('login')}>
                         <Icon name='ios-power' />
@@ -46,16 +53,7 @@ class Home extends Component {
 
                 <Content>
                     <Grid style={{marginTop: 20}}>
-                        {this.props.list.map((item, i) =>
-                            <Row key={i}>
-                                <TouchableOpacity style={styles.row} onPress={() => this.navigateTo('blankPage', i)} >
-                                    <Text style={styles.text}>
-                                        {item}
-                                    </Text>
-                                </TouchableOpacity>
-                            </Row>
-                        )}
-
+                        <Text>{'Hiee'} </Text>
                     </Grid>
                 </Content>
             </Container>
@@ -63,13 +61,13 @@ class Home extends Component {
     }
 }
 
-function bindAction(dispatch) {
+function bindAction() {
     return {
-        openDrawer: ()=>dispatch(openDrawer()),
-        closeDrawer: ()=>dispatch(closeDrawer()),
-        replaceRoute:(route)=>dispatch(replaceRoute(route)),
-        replaceOrPushRoute:(route)=>dispatch(replaceOrPushRoute(route)),
-        setIndex:(index)=>dispatch(setIndex(index))
+        openDrawer,
+        closeDrawer,
+        replaceRoute,
+        replaceOrPushRoute,
+        setIndex
 
     }
 }
@@ -81,4 +79,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, bindAction)(Home);
+export default connect(mapStateToProps, bindAction())(Home);

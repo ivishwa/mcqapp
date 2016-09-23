@@ -16,11 +16,9 @@ module.exports = StyleSheet.create({
         right: 0,
         backgroundColor: '#453F41'
     },
-    shadow: {
-        flex: 1,
-        width: null,
-        height: null,
-        backgroundColor: 'transparent'
+    content: {
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     bg: {
         flex: 1,

@@ -8,7 +8,15 @@ import { connect } from 'react-redux';
 import { replaceRoute } from '../../actions/route';
 import { setUser } from '../../actions/user';
 
-import { Container, Content, InputGroup, Input, Button, Icon, View } from 'native-base';
+import { 
+		Container,
+		Content,
+		InputGroup,
+		Input,
+		Button,
+		Icon,
+		View,
+		Thumbnail } from 'native-base';
 
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
@@ -38,20 +46,29 @@ class Login extends Component {
 		return (
 			<Container theme={myTheme}>
 					<Content>
-								<InputGroup>
-									<Icon name='ios-person' />
-									<Input placeholder='EMAIL' onChangeText={(name) => this.setState({name})} />
-								</InputGroup>
-								<InputGroup>
-									<Icon name='ios-unlock-outline' />
-									<Input
-										placeholder='PASSWORD'
-										secureTextEntry={true}
-									/>
-								</InputGroup>
-								<Button style={styles.btn} textStyle={{color: '#fff'}} onPress={() => this.replaceRoute('home') }>
-									Login
-								</Button>
+							<View style={styles.content}>
+								<Thumbnail size={80} source={require('../../../images/icon.png')} />
+							</View>
+							<View>
+							<InputGroup>
+								<Icon name='logo-chrome' />
+								<Input placeholder='WEBSITE URL' onChangeText={(name) => this.setState({name})} />
+							</InputGroup>
+							<InputGroup>
+								<Icon name='ios-person' />
+								<Input placeholder='EMAIL' onChangeText={(name) => this.setState({name})} />
+							</InputGroup>
+							<InputGroup>
+								<Icon name='ios-unlock-outline' />
+								<Input
+									placeholder='PASSWORD'
+									secureTextEntry={true}
+								/>
+							</InputGroup>
+							<Button style={styles.btn} textStyle={{color: '#fff'}} onPress={() => this.replaceRoute('home') }>
+								Login
+							</Button>
+							</View>
 					</Content>
 			</Container>
 		)
