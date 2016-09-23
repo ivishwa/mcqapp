@@ -136,10 +136,10 @@ module.exports = {
         return this.textColor;
     },
     get inputColorPlaceholder () {
-        return 'rgba(255, 255, 255, 1.0)';
+        return 'rgba(199, 199, 205, 1.0)';
     },
 
-    inputBorderColor: "#fff",
+    inputBorderColor: "#000",
     inputSuccessBorderColor: '#2b8339',
     inputErrorBorderColor: '#ed2f2f',
     inputHeightBase: 40,

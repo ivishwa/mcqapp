@@ -15,60 +15,54 @@ import styles from './styles';
 
 class Login extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            visibleHeight: Dimensions.get('window').height,
-            scroll: false,
-            name: ''
-        };
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+			visibleHeight: Dimensions.get('window').height,
+			scroll: false,
+			name: ''
+		};
+	}
 
-    replaceRoute(route) {
-        this.setUser(this.state.name);
-        this.props.replaceRoute(route);
-    }
+	replaceRoute(route) {
+		this.setUser(this.state.name);
+		this.props.replaceRoute(route);
+	}
 
-    setUser(name) {
-        this.props.setUser(name);
-    }
+	setUser(name) {
+		this.props.setUser(name);
+	}
 
-    render() {
+	render() {
 
-        return (
-            <Container theme={myTheme}>
-                <View style={styles.container}>
-                    <Content>
-                        <Image source={require('../../../images/shadow.png')} style={styles.shadow}>
-                            <View style={styles.bg}>
-                                <InputGroup style={styles.input}>
-                                    <Icon name='ios-person' />
-                                    <Input placeholder='EMAIL' onChangeText={(name) => this.setState({name})} />
-                                </InputGroup>
-                                <InputGroup style={styles.input}>
-                                    <Icon name='ios-unlock-outline' />
-                                    <Input
-                                        placeholder='PASSWORD'
-                                        secureTextEntry={true}
-                                    />
-                                </InputGroup>
-                                <Button style={styles.btn} textStyle={{color: '#fff'}} onPress={() => this.replaceRoute('home') }>
-                                    Login
-                                </Button>
-                            </View>
-                        </Image>
-                    </Content>
-                </View>
-            </Container>
-        )
-    }
+		return (
+			<Container theme={myTheme}>
+					<Content>
+								<InputGroup>
+									<Icon name='ios-person' />
+									<Input placeholder='EMAIL' onChangeText={(name) => this.setState({name})} />
+								</InputGroup>
+								<InputGroup>
+									<Icon name='ios-unlock-outline' />
+									<Input
+										placeholder='PASSWORD'
+										secureTextEntry={true}
+									/>
+								</InputGroup>
+								<Button style={styles.btn} textStyle={{color: '#fff'}} onPress={() => this.replaceRoute('home') }>
+									Login
+								</Button>
+					</Content>
+			</Container>
+		)
+	}
 }
 
 function bindActions(dispatch){
-    return {
-        replaceRoute:(route)=>dispatch(replaceRoute(route)),
-        setUser:(name)=>dispatch(setUser(name))
-    }
+	return {
+		replaceRoute:(route)=>dispatch(replaceRoute(route)),
+		setUser:(name)=>dispatch(setUser(name))
+	}
 }
 
 export default connect(null, bindActions)(Login);
