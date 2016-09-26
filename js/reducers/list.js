@@ -6,7 +6,7 @@ import { SET_INDEX } from '../actions/list';
 import { QUESTION_PAPER } from '../test_data/questions';
 
 export type State = {
-    list: string
+    list: any
 }
 
 const initialState = {
