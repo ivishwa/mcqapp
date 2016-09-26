@@ -61,14 +61,13 @@ class Home extends Component {
     }
 }
 
-function bindAction() {
+function bindAction(dispatch) {
     return {
         openDrawer,
         closeDrawer,
         replaceRoute,
         replaceOrPushRoute,
         setIndex
-
     }
 }
 
