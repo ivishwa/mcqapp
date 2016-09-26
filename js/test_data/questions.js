@@ -23,7 +23,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.836+05:30",
           "updated_at": "2016-09-15T17:23:43.836+05:30",
@@ -49,7 +49,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "logical"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.000+05:30",
           "updated_at": "2016-09-15T17:23:44.000+05:30",
@@ -75,7 +75,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "logical"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.033+05:30",
           "updated_at": "2016-09-15T17:23:44.033+05:30",
@@ -101,7 +101,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "english"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.079+05:30",
           "updated_at": "2016-09-15T17:23:44.079+05:30",
@@ -119,7 +119,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "english"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.067+05:30",
           "updated_at": "2016-09-15T17:23:44.067+05:30",
@@ -163,7 +163,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.900+05:30",
           "updated_at": "2016-09-15T17:23:43.900+05:30",
@@ -181,7 +181,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.949+05:30",
           "updated_at": "2016-09-15T17:23:43.949+05:30",
@@ -207,7 +207,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "logical"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.989+05:30",
           "updated_at": "2016-09-15T17:23:43.989+05:30",
@@ -233,7 +233,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.934+05:30",
           "updated_at": "2016-09-15T17:23:43.934+05:30",
@@ -259,7 +259,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "english"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.055+05:30",
           "updated_at": "2016-09-15T17:23:44.055+05:30",
@@ -285,7 +285,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.915+05:30",
           "updated_at": "2016-09-15T17:23:43.915+05:30",
@@ -311,7 +311,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "english"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.100+05:30",
           "updated_at": "2016-09-15T17:23:44.100+05:30",
@@ -337,7 +337,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "english"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.111+05:30",
           "updated_at": "2016-09-15T17:23:44.111+05:30",
@@ -363,7 +363,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.881+05:30",
           "updated_at": "2016-09-15T17:23:43.881+05:30",
@@ -389,7 +389,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "logical"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.045+05:30",
           "updated_at": "2016-09-15T17:23:44.045+05:30",
@@ -407,7 +407,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.956+05:30",
           "updated_at": "2016-09-15T17:23:43.956+05:30",
@@ -425,7 +425,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.979+05:30",
           "updated_at": "2016-09-15T17:23:43.979+05:30",
@@ -451,7 +451,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "aptitude"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:43.889+05:30",
           "updated_at": "2016-09-15T17:23:43.889+05:30",
@@ -477,7 +477,7 @@ export const QUESTION_PAPER = {
           "tags": [
             "logical"
           ],
-          "helper_text": null,
+          "helper_text": "",
           "status": "active",
           "created_at": "2016-09-15T17:23:44.013+05:30",
           "updated_at": "2016-09-15T17:23:44.013+05:30",
