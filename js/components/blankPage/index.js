@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import QuestionPaperList from '../../components/questionPaper/QuestionPaper'
 
 import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
 
@@ -36,9 +37,7 @@ class BlankPage extends Component {
                 </Header>
 
                 <Content padder>
-                    <Text>
-                        { (!isNaN(index)) ? list[index] : 'Create Something Awesome . . .'}
-                    </Text>
+                    <QuestionPaperList sections={this.props.list.sections} />
                 </Content>
             </Container>
         )

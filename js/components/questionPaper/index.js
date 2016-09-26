@@ -17,13 +17,11 @@ import { Container,
 	import { Grid, Col, Row } from 'react-native-easy-grid';
 
 	import myTheme from '../../themes/base-theme';
-
 	class QuestionPaperList extends Component {
-		render() {
-			return <QuestionPaper />
+		render(){
+			return <Text> {"FFK"}</Text>
 		}
 	}
-
 
 	function bindActions(dispatch){
 		return {
@@ -32,4 +30,4 @@ import { Container,
 		}
 	}
 
-	export default connect(null, bindActions)(QuestionPaperList);
+export default connect(null, bindActions)(QuestionPaperList);

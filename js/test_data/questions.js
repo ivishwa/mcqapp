@@ -1,7 +1,7 @@
 export const QUESTION_PAPER = {
   "sections": [
     {
-      "title": "",
+      "title": "Section 1",
       "questions": [
         {
           "id": 1,
@@ -484,6 +484,9 @@ export const QUESTION_PAPER = {
           "answer_type": "mcq"
         }
       ]
+    },
+    {
+      "title": "Section 2"
     }
   ],
   "title": "APTITUDE TEST"
