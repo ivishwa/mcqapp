@@ -16,6 +16,6 @@ export function submitAnswer(submitedAnswer:any, passProps:any):Action {
 export function setQuestionIndex(index:number):Action {
 	return {
 		type: SET_QUESTION_INDEX,
-		selectedQuestionIndex: index
+		payload: index
 	}
 }

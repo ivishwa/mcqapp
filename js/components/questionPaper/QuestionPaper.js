@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { ListItem, List, Text} from 'native-base';
 
 import { setIndex } from '../../actions/list';
+import {setQuestionIndex} from '../../actions/question';
 import { replaceRoute, replaceOrPushRoute, pushNewRoute } from '../../actions/route';
 
 
@@ -19,7 +20,8 @@ class QuestionPaperList extends Component {
 									title={section.title}
 									index={i}
 									setIndex={this.props.setIndex}
-									pushNewRoute={this.props.pushNewRoute}/>
+									pushNewRoute={this.props.pushNewRoute}
+									setQuestionIndex={this.props.setQuestionIndex}/>
 				})
 			}
 			</List>
@@ -32,6 +34,7 @@ class QuestionPaper extends Component {
 
 	navigateTo(index, route){
 		this.props.setIndex(index);
+		this.props.setQuestionIndex(0);
 		this.props.pushNewRoute(route);
 	}
 
@@ -47,7 +50,8 @@ class QuestionPaper extends Component {
 function bindAction(dispatch) {
     return {
         pushNewRoute: route => dispatch(pushNewRoute(route)),
-        setIndex: index => dispatch(setIndex(index))
+        setIndex: index => dispatch(setIndex(index)),
+        setQuestionIndex: index => dispatch(setQuestionIndex(index))
     }
 }
 

@@ -16,7 +16,6 @@ const initialState = {
 export default function (state:State = initialState, action:Action): State {
     if (action.type === SET_QUESTION_INDEX) {
         return {
-            ...state,
             selectedQuestionIndex: action.payload
         };
     }
