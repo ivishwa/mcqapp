@@ -20,6 +20,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
     "remote-redux-devtools": "^0.4.8",
+    "render-if": "^0.1.1",
     "rx": "^4.1.0"
   },
   "devDependencies": {
