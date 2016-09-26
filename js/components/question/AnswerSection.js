@@ -50,10 +50,9 @@ class McqOptions extends Component {
 	selectAnswer(val){
 
 	}
-
 	render(){
 		return (
-			<ListItem button onPress={() => this.selectAnswer(this.props.val)}>
+			<ListItem button onPress={() => selectAnswer(this.props.val)}>
 					<Radio/>
 					<Text>{this.props.val}</Text>
 			</ListItem>
