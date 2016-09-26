@@ -20,7 +20,7 @@ class QuestionPaperList extends Component {
 class QuestionPaper extends Component {
 	render(){
 		return (
-			<ListItem>
+			<ListItem button onPress={()=>/*Some method*/}>
                 <Text>{this.props.title}</Text>
             </ListItem>
 			);
