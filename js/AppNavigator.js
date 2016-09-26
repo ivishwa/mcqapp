@@ -15,6 +15,7 @@ import Home from './components/home/';
 import BlankPage from './components/blankPage/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
+import QuestionPage from './components/question';
 import { statusBarColor } from "./themes/base-theme";
 
 Navigator.prototype.replaceWithAnimation = function (route) {
@@ -143,13 +144,15 @@ class AppNavigator extends Component {
                 return <Home navigator={navigator} />;
             case 'blankPage':
                 return <BlankPage navigator={navigator} />;
+            case 'questions':
+                return <QuestionPage navigator={navigator} />;
             default :
                 return <Login navigator={navigator}  />;
         }
     }
 }
 
-function bindAction() {
+function bindAction(dispatch) {
     return {
         closeDrawer,
         popRoute
