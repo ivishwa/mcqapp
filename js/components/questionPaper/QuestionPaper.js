@@ -3,10 +3,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ListItem, List, Text} from 'native-base';
-
+import { openDrawer } from '../../actions/drawer';
 import { setIndex } from '../../actions/list';
 import {setQuestionIndex} from '../../actions/question';
-import { replaceRoute, replaceOrPushRoute, pushNewRoute } from '../../actions/route';
+import { replaceRoute, replaceOrPushRoute, pushNewRoute, popRoute } from '../../actions/route';
 
 
 
