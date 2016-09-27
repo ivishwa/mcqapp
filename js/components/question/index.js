@@ -28,7 +28,7 @@ class QuestionPage extends Component {
                         <Icon name='ios-arrow-back' />
                     </Button>
 
-                    <Title>{(index) ?'Question No:' + (index) : 'Question 1' }</Title>
+                    <Title>{(index) ?'Question No:' + (index + 1) : 'Question:1' }</Title>
 
                     <Button transparent onPress={this.props.openDrawer}>
                         <Icon name='ios-menu' />
@@ -36,7 +36,7 @@ class QuestionPage extends Component {
                 </Header>
 
                 <Content padder>
-                        <Question question={questions[index]}/>
+                        <Question question={questions[index]} index={index}/>
                 </Content>
             </Container>
         )
