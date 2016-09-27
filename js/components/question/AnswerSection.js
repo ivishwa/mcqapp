@@ -19,7 +19,7 @@ class AnswerSection extends Component {
 	render(){
 		return (
 				<CardItem>
-					<If condition={(this.props.values.input == "input")}>
+					<If condition={(this.props.values.input == "text")}>
 							<TextAnswerComponent/>		
 					</If>
 					<If condition={(this.props.values.input == "radio")}>
