@@ -11,14 +11,16 @@ export type State = {
 
 const initialState = {
     list: QUESTION_PAPER,
-    selectedIndex: undefined
+    selectedIndex: undefined,
+    questions: undefined
 };
 
 export default function (state:State = initialState, action:Action): State {
     if (action.type === SET_INDEX) {
         return {
             ...state,
-            selectedIndex: action.payload
+            selectedIndex: action.payload,
+            section: state.list.sections[action.payload]
         };
     }
     return state;

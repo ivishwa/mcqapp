@@ -9,14 +9,15 @@ export type State = {
 }
 
 const initialState = {
-    list: QUESTION_PAPER,
-    selectedQuestionIndex: 0
+    selectedQuestionIndex: 0,
+    currentQuestion: undefined,
 };
 
 export default function (state:State = initialState, action:Action): State {
     if (action.type === SET_QUESTION_INDEX) {
         return {
-            selectedQuestionIndex: action.payload
+            selectedQuestionIndex: action.payload,
+            currentQuestion: state.list
         };
     }
     return state;
