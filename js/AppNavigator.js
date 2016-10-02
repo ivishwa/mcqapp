@@ -13,6 +13,7 @@ import Navigator from 'Navigator';
 import Login from './components/login/';
 import Home from './components/home/';
 import BlankPage from './components/blankPage/';
+import BlankPage2 from './components/blankPage2/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
 import QuestionPage from './components/question';
@@ -144,6 +145,8 @@ class AppNavigator extends Component {
                 return <Home navigator={navigator} />;
             case 'blankPage':
                 return <BlankPage navigator={navigator} />;
+            case 'blankPage2':
+                return <BlankPage2 navigator={navigator} />;
             case 'questions':
                 return <QuestionPage navigator={navigator} />;
             default :
