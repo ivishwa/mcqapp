@@ -31,7 +31,7 @@ class SideBar extends Component {
                         <Text>Blank Page</Text>
                     </ListItem>
                     <ListItem button onPress={() => this.navigateTo('blankPage2')} >
-                        <Text>Blank Page</Text>
+                        <Text>Shoutem Page</Text>
                     </ListItem>
                 </List>
             </Content>
