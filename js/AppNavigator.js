@@ -13,7 +13,7 @@ import Navigator from 'Navigator';
 import Login from './components/login/';
 import Home from './components/home/';
 import BlankPage from './components/blankPage/';
-import BlankPage2 from './components/blankPage2/';
+import BlankPage2 from './components/blankpage2/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
 import QuestionPage from './components/question';
