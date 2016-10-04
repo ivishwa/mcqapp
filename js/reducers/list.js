@@ -10,9 +10,8 @@ export type State = {
 }
 
 const initialState = {
-    list: QUESTION_PAPER,
+    list: QUESTION_PAPER['sections'],
     selectedIndex: undefined,
-    questions: undefined
 };
 
 export default function (state:State = initialState, action:Action): State {
@@ -20,7 +19,7 @@ export default function (state:State = initialState, action:Action): State {
         return {
             ...state,
             selectedIndex: action.payload,
-            section: state.list.sections[action.payload]
+            selectedSection: state.list[action.payload]
         };
     }
     return state;
