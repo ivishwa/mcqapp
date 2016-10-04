@@ -37,7 +37,7 @@ class BlankPage extends Component {
                 </Header>
 
                 <Content padder>
-                    <QuestionPaperList sections={this.props.list.sections} />
+                    <QuestionPaperList/>
                 </Content>
             </Container>
         )
