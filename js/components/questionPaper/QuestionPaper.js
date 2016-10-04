@@ -15,13 +15,11 @@ class QuestionPaperList extends Component {
 		return (
 			<List>
 			{
-				this.props.sections.map((section, i) => {
+				this.props.list.map((section, i) => {
 				return <QuestionPaper key={i} 
 									title={section.title}
 									index={i}
-									setIndex={this.props.setIndex}
-									pushNewRoute={this.props.pushNewRoute}
-									setQuestionIndex={this.props.setQuestionIndex}/>
+									{...this.props}/>
 				})
 			}
 			</List>
