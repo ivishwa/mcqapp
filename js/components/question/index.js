@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
 import { setQuestionIndex } from '../../actions/question';
-import Question from './question'
+import Question from './question';
 import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
 
 import myTheme from '../../themes/base-theme';
@@ -19,7 +19,7 @@ class QuestionPage extends Component {
     }
     render() {
 
-        const { props: { questions, index, list } } = this;
+        const { props: { index} } = this;
 
         return (
             <Container theme={myTheme} style={{backgroundColor: '#fff'}}>
@@ -36,7 +36,7 @@ class QuestionPage extends Component {
                 </Header>
 
                 <Content padder>
-                        <Question question={questions[index]} index={index}/>
+                        <Question/>
                 </Content>
             </Container>
         )
@@ -54,10 +54,8 @@ function bindAction(dispatch) {
 
 function mapStateToProps(state) {
     return {
-        questions: state.list.list.sections[state.list.selectedIndex].questions,
-        list: state.list.list,
-        index: state.question.selectedQuestionIndex
-    };
+        index: state.question.selectedQuestionIndex,
+       };
 }
 
 export default connect(mapStateToProps, bindAction)(QuestionPage);
