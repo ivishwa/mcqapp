@@ -2,16 +2,25 @@
 
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { Card, CardItem, Text,Button, Icon} from 'native-base';
+import { Card, CardItem, Text,Button, Icon,View} from 'native-base';
 import QuestionSection from './QuestionSection';
 import AnswerSection from './AnswerSection';
 import { openDrawer } from '../../actions/drawer';
 import {setQuestionIndex} from '../../actions/question';
 import { replaceRoute, replaceOrPushRoute, pushNewRoute, popRoute } from '../../actions/route';
+import If from '../If'
+
 class Question extends Component {
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return false;
+    }
+
+    componentWillMount(){
+    }
+
 	nextQuestion(index){
-		this.props.setQuestionIndex((index + 1) % this.props.totalQuestions);
+		this.props.setQuestionIndex(index + 1);
 		this.props.pushNewRoute('questions');
 	}
 
@@ -20,33 +29,53 @@ class Question extends Component {
 		this.props.setQuestionIndex(i);
 		this.props.popRoute();
 	}
-	render() {
-		return (
-			<Card>
-				<QuestionSection text={this.props.question.question_text}/>
-				<AnswerSection values={this.props.question.options}/>
-				<CardItem header>                        
-          <Button onPress={() => this.prevQuestion(this.props.index)}>
-            <Icon name='ios-arrow-back'/>
-            Previous
-          </Button>
-          <Button iconRight onPress={() => this.nextQuestion(this.props.index)}>
-            Next
-            <Icon name='ios-arrow-forward' />
-          </Button>
 
-        </CardItem>
-			</Card>
+    endExam(){
+    }
+
+    renderButtons(){
+        if((this.props.questionCount-1) === this.props.index)
+        {
+            return (
+                <Button iconRight onPress={() => this.endExam()}>
+                    Finish
+                </Button>
+            );
+        } else {
+            return(
+            <Button iconRight onPress={() => this.nextQuestion(this.props.index)}>
+                        Next
+                <Icon name='ios-arrow-forward' />
+            </Button>
+            );
+        }       
+    }
+	render() {
+        const { props: { index, selectedQuestion } } = this;
+
+		return (
+			<View>
+				<QuestionSection text={selectedQuestion.question_text}/>
+				<AnswerSection values={selectedQuestion.options}/>
+				<CardItem header>  
+                    <If condition={(index !== 0)}>
+                        <Button onPress={() => this.prevQuestion(index)}>
+                            <Icon name='ios-arrow-back'/>
+                            Previous
+                        </Button>
+                    </If>                      
+                    { this.renderButtons()}
+                </CardItem>
+			</View>
 			);
 	}
 }
 
 function mapStateToProps(state) {
     return {
-        questions: state.list.list.sections[state.list.selectedIndex].questions,
-        list: state.list.list,
         index: state.question.selectedQuestionIndex,
-        totalQuestions: state.list.list.sections[state.list.selectedIndex].questions.length
+        selectedQuestion: state.list.selectedSection.questions[state.question.selectedQuestionIndex],
+        questionCount: state.list.selectedSection.questions.length
     };
 }
 
