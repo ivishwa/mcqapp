@@ -12,9 +12,15 @@
   },
   "dependencies": {
     "@shoutem/ui": "^0.9.1",
+    "babel": "^6.3.26",
+    "babel-polyfill": "^6.3.14",
+    "clone": "^1.0.2",
     "lodash": "^4.13.1",
+    "morgan": "^1.6.1",
     "native-base": "^0.5.8",
+    "object-assign": "^4.0.1",
     "react": "15.3.2",
+    "react-dom": "^0.14.6",
     "react-native": "0.33.0",
     "react-native-button": "^1.6.0",
     "react-native-easy-grid": "^0.1.6",
@@ -28,14 +34,7 @@
     "remote-redux-devtools": "^0.4.8",
     "render-if": "^0.1.1",
     "rx": "^4.1.0",
-    "babel": "^6.3.26",
-    "babel-polyfill": "^6.3.14",
-    "clone": "^1.0.2",
-    "morgan": "^1.6.1",
-    "object-assign": "^4.0.1",
-    "react-dom": "^0.14.6",
     "superagent": "^1.7.2"
-
   },
   "devDependencies": {
     "babel-eslint": "^6.0.5",
