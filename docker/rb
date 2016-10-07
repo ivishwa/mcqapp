@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_NAME=reactnative
+CONTAINER_NAME=reacnativemcq
 
 # Function to determine if named docker instance is already running
 check_running () {
