@@ -35,7 +35,6 @@
     "redux-promise": ">=0.5.3",
     "redux-thunk": ">=2.1.0",
     "remote-redux-devtools": ">=0.4.9",
-    "render-if": ">=0.1.1",
     "rx": ">=4.1.0",
     "superagent": ">=1.7.2",
     "webpack-dev-server": ">=1.16.2"
