@@ -11,7 +11,6 @@
     "clear-cache": "gulp clear-cache"
   },
   "dependencies": {
-    "@shoutem/ui": "^0.9.1",
     "babel": "^6.3.26",
     "babel-polyfill": "^6.3.14",
     "clone": "^1.0.2",
