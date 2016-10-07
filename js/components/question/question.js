@@ -25,7 +25,7 @@ class Question extends Component {
 	}
 
 	prevQuestion(index){
-		var i = (index === 0)?0 : (index-1) 
+		var i = (index === 0)?0 : (index-1)
 		this.props.setQuestionIndex(i);
 		this.props.popRoute();
 	}
@@ -48,7 +48,7 @@ class Question extends Component {
                 <Icon name='ios-arrow-forward' />
             </Button>
             );
-        }       
+        }
     }
 	render() {
         const { props: { index, selectedQuestion } } = this;
@@ -57,15 +57,7 @@ class Question extends Component {
 			<View>
 				<QuestionSection text={selectedQuestion.question_text}/>
 				<AnswerSection values={selectedQuestion.options}/>
-				<CardItem header>  
-                    <If condition={(index !== 0)}>
-                        <Button onPress={() => this.prevQuestion(index)}>
-                            <Icon name='ios-arrow-back'/>
-                            Previous
-                        </Button>
-                    </If>                      
-                    { this.renderButtons()}
-                </CardItem>
+
 			</View>
 			);
 	}
@@ -74,8 +66,7 @@ class Question extends Component {
 function mapStateToProps(state) {
     return {
         index: state.question.selectedQuestionIndex,
-        selectedQuestion: state.list.selectedSection.questions[state.question.selectedQuestionIndex],
-        questionCount: state.list.selectedSection.questions.length
+        selectedQuestion: state.list.selectedSection.questions[state.question.selectedQuestionIndex]
     };
 }
 
