@@ -6,13 +6,13 @@ import { connect } from 'react-redux';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
-import QuestionPaperList from '../../components/questionPaper/QuestionPaper'
+import QuestionPaperList from './QuestionPaper';
 
 import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
 
-import myTheme from '../../themes/base-theme';
+import myTheme from '../styles/base-theme';
 
-class BlankPage extends Component {
+class QuestionPaperSection extends Component {
 
     popRoute() {
         this.props.popRoute();
@@ -59,4 +59,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, bindAction)(BlankPage);
+export default connect(mapStateToProps, bindAction)(QuestionPaperSection);

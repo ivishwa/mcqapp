@@ -5,7 +5,7 @@ import { AppState } from 'react-native';
 
 import AppNavigator from './AppNavigator';
 
-import theme from './themes/base-theme';
+import theme from '../styles/base-theme';
 
 class App extends Component {
     

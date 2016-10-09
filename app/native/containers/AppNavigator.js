@@ -6,17 +6,17 @@ import { connect } from 'react-redux';
 import _ from 'lodash/core';
 import { Drawer } from 'native-base';
 import { BackAndroid, Platform, StatusBar } from 'react-native';
-import { closeDrawer } from './actions/drawer';
-import { popRoute } from './actions/route';
+import { closeDrawer } from '../../actions/drawer';
+import { popRoute } from '../../actions/route';
 import Navigator from 'Navigator';
 
-import Login from './components/login/';
-import Home from './components/home/';
-import BlankPage from './components/blankPage/';
-import SplashPage from './components/splashscreen/';
-import SideBar from './components/sideBar';
-import QuestionPage from './components/question';
-import { statusBarColor } from "./themes/base-theme";
+import Login from './Login';
+import Home from './Home';
+import QuestionPaperSection from './QuestionPaperSection';
+import SplashPage from '../components/SplashScreen';
+import SideBar from './SideBar';
+import QuestionPage from './QuestionPage';
+import { statusBarColor } from "../styles/base-theme";
 
 Navigator.prototype.replaceWithAnimation = function (route) {
     const activeLength = this.state.presentedIndex + 1;
@@ -61,7 +61,7 @@ const reducerCreate = params=>{
 const drawerStyle  = { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3};
 
 class AppNavigator extends Component {
-    
+
     constructor(props){
         super(props);
     }
@@ -142,8 +142,8 @@ class AppNavigator extends Component {
                 return <Login navigator={navigator} />;
             case 'home':
                 return <Home navigator={navigator} />;
-            case 'blankPage':
-                return <BlankPage navigator={navigator} />;
+            case 'qpSection':
+                return <QuestionPaperSection navigator={navigator} />;
             case 'questions':
                 return <QuestionPage navigator={navigator} />;
             default :

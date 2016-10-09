@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import If from '../If'
+import If from '../components/If'
 import { Card,
   CardItem,
   Text,
@@ -18,6 +18,10 @@ import {submitAnswer} from '../../actions/question';
 
 
 class AnswerSection extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return false
+  }
   render(){
     return (
       <CardItem>
@@ -34,6 +38,10 @@ class AnswerSection extends Component {
 
 
 class McqAnswerComponent extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return false
+  }
   render() {
     return (
       <List>
@@ -48,6 +56,10 @@ class McqAnswerComponent extends Component {
 }
 
 class McqOptions extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return false
+  }
 
   selectAnswer(val){
     this.props.submitAnswer([val])

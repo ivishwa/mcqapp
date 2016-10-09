@@ -20,8 +20,8 @@ import { Container,
          Icon } from 'native-base';
 import { Grid, Col, Row } from 'react-native-easy-grid';
 
-import myTheme from '../../themes/base-theme';
-import styles from './styles';
+import myTheme from '../styles/base-theme';
+import styles from '../styles/home-style';
 
 class Home extends Component {
 

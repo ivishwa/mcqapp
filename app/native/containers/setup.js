@@ -6,7 +6,7 @@ import { StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 
 import App from './App';
-import configureStore from './configureStore'
+import configureStore from '../../store/configureStore'
 
 function setup():React.Component {
 

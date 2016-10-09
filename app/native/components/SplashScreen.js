@@ -8,6 +8,7 @@ import {
     Dimensions
      } from 'react-native';
 var {height, width} = Dimensions.get('window');
+
 export default class SplashPage extends Component {
     componentWillMount () {
         var navigator = this.props.navigator;

@@ -10,11 +10,9 @@ import list from './list';
 import question from './question';
 
 export default combineReducers({
-
  	drawer,
  	route,
-    user,
-    list,
-    question
-
+  user,
+  list,
+  question
 })

@@ -7,16 +7,12 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { replaceRoute, replaceOrPushRoute, pushNewRoute, popRoute } from '../../actions/route';
 import { setQuestionIndex } from '../../actions/question';
-import Question from './question';
+import myTheme from '../styles/base-theme';
+import Question from './Question';
 import { Container, Header, Title, Content, Text, Button, Icon, CardItem } from 'native-base';
-import If from '../../components/If'
-import myTheme from '../../themes/base-theme';
+import If from '../components/If';
 
 class QuestionPage extends Component {
-
-  shouldComponentUpdate(nextProps, nextState) {
-      return false;
-  }
 
   popRoute() {
     this.props.popRoute();

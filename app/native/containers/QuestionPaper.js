@@ -14,16 +14,16 @@ class QuestionPaperList extends Component {
 	render() {
 		return (
 			<List>
-			{
-				this.props.list.map((section, i) => {
-				return <QuestionPaper key={i} 
-									title={section.title}
-									index={i}
-									{...this.props}/>
-				})
-			}
+				{
+					this.props.list.map((section, i) => {
+						return <QuestionPaper key={i}
+							title={section.title}
+							index={i}
+							{...this.props}/>
+					})
+				}
 			</List>
-			)
+		)
 	}
 }
 
@@ -39,23 +39,23 @@ class QuestionPaper extends Component {
 	render(){
 		return (
 			<ListItem button onPress={() => this.navigateTo(this.props.index,'questions')}>
-                <Text>{this.props.title}</Text>
-            </ListItem>
-			);
+				<Text>{this.props.title}</Text>
+			</ListItem>
+		);
 	}
 }
 
 function bindAction(dispatch) {
-    return {
-        pushNewRoute: route => dispatch(pushNewRoute(route)),
-        setIndex: index => dispatch(setIndex(index)),
-        setQuestionIndex: index => dispatch(setQuestionIndex(index))
-    }
+	return {
+		pushNewRoute: route => dispatch(pushNewRoute(route)),
+		setIndex: index => dispatch(setIndex(index)),
+		setQuestionIndex: index => dispatch(setQuestionIndex(index))
+	}
 }
 
 function mapStateToProps(state) {
-    return {
-        list: state.list.list
-    };
+	return {
+		list: state.list.list
+	};
 }
 export default connect(mapStateToProps, bindAction)(QuestionPaperList);

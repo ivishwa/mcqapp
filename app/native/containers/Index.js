@@ -7,7 +7,7 @@ import {pushNewRoute, replaceRoute} from '../../actions/route';
 
 import { Container, Content, Text } from 'native-base';
 
-import myTheme from '../../themes/base-theme';
+import myTheme from '../styles/base-theme';
 
 
 class Index extends Component {

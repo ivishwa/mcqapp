@@ -6,7 +6,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import devTools from 'remote-redux-devtools'
 import { persistStore } from 'redux-persist'
 import thunk from 'redux-thunk'
-import reducer from './reducers'
+import reducer from '../reducers'
 import promiseMiddleware from 'redux-promise';
 export default function configureStore(onCompletion:()=>void):any {
 	const enhancer = compose(

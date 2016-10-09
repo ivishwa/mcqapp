@@ -18,8 +18,8 @@ import {
 		View,
 		Thumbnail } from 'native-base';
 
-import myTheme from '../../themes/base-theme';
-import styles from './styles';
+import myTheme from '../styles/base-theme';
+import styles from '../styles/login-style';
 
 class Login extends Component {
 

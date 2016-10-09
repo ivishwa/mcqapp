@@ -10,7 +10,7 @@ import { replaceOrPushRoute } from '../../actions/route';
 
 import {Content, Text, List, ListItem } from 'native-base';
 
-import styles from './style';
+import styles from '../styles/sidebar-style';
 
 class SideBar extends Component {
 
@@ -27,8 +27,8 @@ class SideBar extends Component {
                     <ListItem button onPress={() => this.navigateTo('home')} >
                         <Text>Home</Text>
                     </ListItem>
-                    <ListItem button onPress={() => this.navigateTo('blankPage')} >
-                        <Text>Blank Page</Text>
+                    <ListItem button onPress={() => this.navigateTo('qpSection')} >
+                        <Text>QP List</Text>
                     </ListItem>
                 </List>
             </Content>
