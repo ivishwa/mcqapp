@@ -19,18 +19,25 @@ module.exports = {
       { test: /\.less$/, loader: 'style!css!autoprefixer?browsers=last 2 version!less' },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude:[ /node_modules/,
+          /native/,
+          path.join(__dirname, '../../app/store/configureStore.js')
+        ],
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react'],
-          plugins: [['react-transform', {
-            transforms: [{
-              transform: 'react-transform-hmr',
-              imports: ['react'],
-              // this is important for Webpack HMR:
-              locals: ['module']
+          plugins: [
+            ['react-transform', {
+              transforms: [{
+                transform: 'react-transform-hmr',
+                imports: ['react'],
+                // this is important for Webpack HMR:
+                locals: ['module']
+              }],
             }],
-          }]],
+            ["transform-object-rest-spread",
+            { "useBuiltIns": true }]
+          ],
         },
       },
     ],
