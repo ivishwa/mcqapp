@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android-bundle": "react-native bundle --dev false --entry-file index.android.js --platform android --bundle-output android/app/src/main/assets/index.android.bundle",
+    "android-dev-bundle": "react-native bundle --entry-file index.android.js --platform android --bundle-output android/app/src/main/assets/index.android.bundle",
+    "web-bundle": "webpack --config web/webpack/web.prod.config.js --progress --colors",
+    "web-dev": "webpack-dev-server --content-base web/public/ --config web/webpack/web.dev.config.js --port 3001 --inline --hot --colors",
+    "clear-cache": "gulp clear-cache"
   },
   "devDependencies": {
     "babel-core": ">=6.17.0",
@@ -18,14 +23,15 @@
     "webpack-hot-middleware": "^2.12.2"
   },
   "dependencies": {
+    "gulp": "^3.9.1",
     "lodash": "^4.16.1",
     "material-ui": ">=0.16.0",
     "native-base": "^0.5.8",
     "react": "15.3.2",
     "react-dom": ">=15.3.2",
     "react-native": "0.34.0",
-    "react-tap-event-plugin": ">=1.0.0",
     "react-redux": "^4.4.5",
+    "react-tap-event-plugin": ">=1.0.0",
     "redux": "^3.6.0",
     "redux-logger": ">=2.7.0",
     "redux-persist": "^4.0.0-alpha5",
