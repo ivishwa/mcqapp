@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "gulp": "^3.9.1",
+    "immutable": "^3.8.1",
     "lodash": "^4.16.1",
     "material-ui": ">=0.16.0",
     "native-base": "^0.5.8",
@@ -32,6 +33,7 @@
     "react-native": "0.34.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
     "react-tap-event-plugin": ">=1.0.0",
     "redux": "^3.6.0",
     "redux-logger": ">=2.7.0",
