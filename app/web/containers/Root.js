@@ -1,8 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Router, Route, Link, browserHistory} from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
-import configureStore from '../../store/configureStoreWeb'
-import App from './App'
+import reducers from '../../reducers/webIndex';
+import configureStore from '../../store/configureStoreWeb';
+import App from './App';
+import NoMatch from '../components/NoMatch';
 
 class Root extends React.Component {
 
