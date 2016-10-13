@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_NAME=reactnativemcq
+CONTAINER_NAME=${1:-reactnative}
 
 # Function to determine if named docker instance is already running
 check_running () {
@@ -29,6 +29,7 @@ docker run \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
        -v /dev/bus/usb:/dev/bus/usb \
        -v /home/$USER/.android:/home/dev/.android \
+       -v /home/$USER/.yarn-cache:/home/dev/.yarn-cache \
        -v $(pwd):/home/dev/app \
        --net host \
        -e DISPLAY="$DISPLAY" \
