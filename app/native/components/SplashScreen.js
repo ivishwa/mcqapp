@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'native-base';
+import {Actions} from 'react-native-router-flux';
 import {
     Image,
     Dimensions
@@ -11,11 +12,8 @@ var {height, width} = Dimensions.get('window');
 
 export default class SplashPage extends Component {
     componentWillMount () {
-        var navigator = this.props.navigator;
         setTimeout (() => {
-            navigator.replace({
-                id: 'index',
-            });
+          Actions.login();
         }, 1500);
     }
     render () {
