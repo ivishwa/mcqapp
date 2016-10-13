@@ -2,46 +2,60 @@
 'use strict';
 
 import React, { Component } from 'react';
+import {BackAndroid } from 'react-native';
 import { connect } from 'react-redux';
-
-import { closeDrawer } from '../../actions/drawer';
+import {Actions} from 'react-native-router-flux';
 import { setIndex } from '../../actions/list';
-import { replaceOrPushRoute } from '../../actions/route';
-
 import {Content, Text, List, ListItem } from 'native-base';
-
 import styles from '../styles/sidebar-style';
 
 class SideBar extends Component {
 
-    navigateTo(route) {
-        this.props.closeDrawer();
-        this.props.setIndex(undefined);
-        this.props.replaceOrPushRoute(route);
-    }
+  componentDidMount () {
+    BackAndroid.addEventListener('hardwareBackPress', () => {
+      if (this.context.drawer.props.open) {
+        this.toggleDrawer()
+        return true
+      }
+      return false
+    })
+  }
 
-    render(){
-        return (
-            <Content style={styles.sidebar} >
-                <List foregroundColor={'#000'}>
-                    <ListItem button onPress={() => this.navigateTo('home')} >
-                        <Text>Home</Text>
-                    </ListItem>
-                    <ListItem button onPress={() => this.navigateTo('qpSection')} >
-                        <Text>QP List</Text>
-                    </ListItem>
-                </List>
-            </Content>
-        );
-    }
+  toggleDrawer () {
+    this.context.drawer.toggle();
+  }
+
+  navigateTo(route, params={}) {
+    this.props.setIndex(undefined);
+    this.toggleDrawer();
+    route(params);
+  }
+
+  render(){
+    return (
+      <Content style={styles.sidebar} >
+        <List foregroundColor={'#000'}>
+          <ListItem button onPress={() => this.navigateTo(Actions.home)} >
+            <Text>Home</Text>
+          </ListItem>
+          <ListItem button onPress={() => this.navigateTo(Actions.qpSection)} >
+            <Text>QP List</Text>
+          </ListItem>
+        </List>
+      </Content>
+    );
+  }
+}
+
+SideBar.contextTypes = {
+drawer: React.PropTypes.object
 }
 
 function bindAction(dispatch) {
-    return {
-        closeDrawer: ()=>dispatch(closeDrawer()),
-        replaceOrPushRoute:(route)=>dispatch(replaceOrPushRoute(route)),
-        setIndex:(index)=>dispatch(setIndex(index))
-    }
+  return {
+    setIndex:(index)=>dispatch(setIndex(index)),
+
+  }
 }
 
 export default connect(null, bindAction)(SideBar);

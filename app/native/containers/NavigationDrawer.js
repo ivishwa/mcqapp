@@ -16,6 +16,7 @@ class NavigationDrawer extends Component {
         onOpen={() => NavigationActions.refresh({key: state.key, open: true})}
         onClose={() => NavigationActions.refresh({key: state.key, open: false})}
         content={<SideBar />}
+        side={"right"}
         tapToClose
         openDrawerOffset={0.2}
         panCloseMask={0.2}
