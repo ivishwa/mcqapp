@@ -84,15 +84,18 @@ RUN adduser --disabled-password --gecos '' $USERNAME && \
 # RUN echo "no" | android create avd -n android-23-phone -c 1000M -s WVGA854 -t 1
 
 
+# Tell gradle to store dependencies in a sub directory of the android project
+# this persists the dependencies between builds
+ENV GRADLE_USER_HOME /home/$USERNAME/app/android/gradle_deps
+
+RUN npm install --global yarn
+
 USER $USERNAME
 
 # Set workdir
 # You'll need to run this image with a volume mapped to /home/dev (i.e. -v $(pwd):/home/dev) or override this value
 WORKDIR /home/$USERNAME/app
 
-# Tell gradle to store dependencies in a sub directory of the android project
-# this persists the dependencies between builds
-ENV GRADLE_USER_HOME /home/$USERNAME/app/android/gradle_deps
 
 ENTRYPOINT ["/tini", "--"]
 
