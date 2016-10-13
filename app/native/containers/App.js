@@ -1,12 +1,13 @@
 'use strict';
 
-import React,{ Component } from 'react';
+import React,{PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { AppState } from 'react-native';
 import { Drawer } from 'native-base';
 import { Scene, Router } from 'react-native-router-flux';
 import Login from './Login';
 import SideBar from './SideBar';
+import NavigationDrawer from './NavigationDrawer';
 import Home from './Home';
 import QuestionPaperSection from './QuestionPaperSection';
 import QuestionPage from './QuestionPage';
@@ -26,7 +27,7 @@ class App extends Component {
   render() {
     return(
       <RouterWithRedux>
-        <Scene key="drawer" component={MyDrawer} open={false}>
+        <Scene key="drawer" component={NavigationDrawer} open={false}>
           <Scene key="main">
             <Scene key="splash" component={SplashPage} initial={true} hideNavBar={true} title="Launch" />
             <Scene key="login" component={Login} title="Login" hideNavBar={true} type="replace" />
@@ -59,7 +60,10 @@ class MyDrawer extends Component {
         negotiatePan={true}>
 
         <DefaultRenderer navigationState={children[0]} onNavigate={this.props.onNavigate} />
-      </Drawer>);
-    }
+      </Drawer>
+    );
   }
-  export default App
+}
+
+MyDrawer = connect()(MyDrawer);
+export default App
