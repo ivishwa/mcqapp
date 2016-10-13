@@ -5,10 +5,11 @@ import React, { Component } from 'react';
 import { DeviceEventEmitter, Dimensions, Image } from 'react-native';
 import { connect } from 'react-redux';
 
-import { replaceRoute } from '../../actions/route';
 import { setUser } from '../../actions/user';
+import {Actions} from 'react-native-router-flux';
 
-import { 
+
+import {
 		Container,
 		Content,
 		InputGroup,
@@ -30,11 +31,6 @@ class Login extends Component {
 			scroll: false,
 			name: ''
 		};
-	}
-
-	replaceRoute(route) {
-		this.setUser(this.state.name);
-		this.props.replaceRoute(route);
 	}
 
 	setUser(name) {
@@ -65,7 +61,7 @@ class Login extends Component {
 									secureTextEntry={true}
 								/>
 							</InputGroup>
-							<Button style={styles.btn} textStyle={{color: '#fff'}} onPress={() => this.replaceRoute('home') }>
+							<Button style={styles.btn} textStyle={{color: '#fff'}} onPress={() => Actions.home() }>
 								Login
 							</Button>
 							</View>
@@ -77,7 +73,6 @@ class Login extends Component {
 
 function bindActions(dispatch){
 	return {
-		replaceRoute:(route)=>dispatch(replaceRoute(route)),
 		setUser:(name)=>dispatch(setUser(name))
 	}
 }
