@@ -18,9 +18,13 @@ class Root extends React.Component {
   }
 
   render() {
+    let history = syncHistoryWithStore(browserHistory, configureStore())
     return (
-      <Provider store={this.state.store}>
-        <App store={this.state.store} />
+      <Provider store={configureStore()}>
+        <Router history={history}>
+          <Route path="/" component={App}/>
+          <Route path="app" components={App} />
+        </Router>
       </Provider>
     );
   }
